@@ -9,7 +9,7 @@ body{
 	margin-top: 100px;
 	margin-left: 20px;
 }
-div{
+#anadirLista{
 	
 	color: #B9A8C3;
 	background-color: #79558B;
@@ -19,7 +19,7 @@ div{
 	padding: 10px 10px;
 
 }
-#form{
+#formulario{
 	display: none;
 }
 button{
@@ -43,7 +43,7 @@ input{
 form{
 	background-color: #E2E4E6;
 	width: 280px;
-	height: 75px;
+	heiht: 75px;
 	padding: 5px 5px 5px 5px;
 	border-radius: 5px;
 	margin-left: -11px;
