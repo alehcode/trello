@@ -12,28 +12,37 @@ window.addEventListener("load", function() {
 		formulario.style.display = "block";
 		textoImput.focus();
 	});
-
 	cerrar.addEventListener("click", function() {
 		formulario.style.display = "none";
 		anadirLista.style.display = "block";
 	});
-
 	guardar.addEventListener("click", function() {
 		formulario.style.display = "none";
 		anadirLista.style.display = "block";
 
 	});
-
 	guardar.addEventListener("click", function() {
 		guardarNombreTarjeta(textoImput);
+		agregarContenedor();
 	});
 
 	function guardarNombreTarjeta(imputForm){
+		var papa = imputForm.parentElement.parentElement;
 		var tituloTarjeta = document.createElement("div");
 		tituloTarjeta.innerText = imputForm.value;
 		cajaLista.insertBefore(tituloTarjeta,cajaLista.childNodes[0]);
+		tituloTarjeta.classList.add("tituLista");
 	}
 });
+	
+	function agregarContenedor(){
+		var nuevaLista = document.createElement("div");
+		caja.appendChild(nuevaLista);
+		nuevaLista.classList.add("nombre");
+		nuevaLista.insertBefore(anadirLista, nuevaLista.childNodes[0]);
+		nuevaLista.insertBefore(formulario, nuevaLista.childNodes[1]);
+		
+	}
 		// var nuevaTarjeta = document.createElement("div");
 		// var nodo = document.createElement("h5");
 		// var nodoDos = document.createElement("a");
